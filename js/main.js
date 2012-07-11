@@ -6,26 +6,14 @@ $('.faq-q').on('click', 'a', function(e){
 	e.preventDefault();
 
 	var $this = $(this),
-		$question = $this.parent(),
-		$answer = $question.siblings('.faq-a').first(),
-		bg = $this.css('background');
+		$links = $('.faq-q > a'),
+		$block = $this.closest('.faq-block');
+
+	$links.removeClass('active');
+	var bg = $this.addClass('active').css('background');
 
 	$this.css('background', 'none');
 
-	console.log($question);
-
-	$answer.css({
-		left: 500
-	});
-
-	$question.animate({
-		left: 500
-	}, 500, function(){
-		$answer.fadeIn();
-	});
-
-	
 });
-
 });
 

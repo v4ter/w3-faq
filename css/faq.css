@@ -22,11 +22,6 @@
 	width:50%;
 }
 
-.faq-q-list{
-	margin:0;
-	padding:0;
-}
-
 .faq-q{
 	background:url(../img/dotted_line_2.png) repeat-x left top;
 	position:relative;
@@ -43,7 +38,11 @@
 	background:url(../img/dotted_line_vertical.png) repeat-y right top;
 }
 
-.faq-q:first-child{
+.faq-q > a:focus{
+	outline:none;
+}
+
+.faq-block:first-child > .faq-q{
 	background:none;
 }
 
