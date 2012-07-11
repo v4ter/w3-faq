@@ -1,0 +1,44 @@
+@font-face {
+	font-family: 'quicksand-bold';
+	src: url('fonts/quicksand_bold-webfont.eot');
+    src: url('fonts/quicksand_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         /*url('fonts/quicksand_bold-webfont.woff') format('woff'),*/
+         url('fonts/quicksand_bold-webfont.ttf') format('truetype'),
+         url('fonts/quicksand_bold-webfont.svg#quicksand-bold') format('svg');
+}
+
+@font-face {
+	font-family: 'quicksand-book';
+	src: url('fonts/quicksand_book-webfont.eot');
+    src: url('fonts/quicksand_book-webfont.eot?#iefix') format('embedded-opentype'),
+         /*url('fonts/quicksand_book-webfont.woff') format('woff'),*/
+         url('fonts/quicksand_book-webfont.ttf') format('truetype');
+ }
+
+@font-face {
+	font-family: 'quicksand-book-italic';
+	src: url('fonts/quicksand_book_oblique-webfont.eot');
+    src: url('fonts/quicksand_book_oblique-webfont.eot?#iefix') format('embedded-opentype'),
+         /*url('fonts/quicksand_book_oblique-webfont.woff') format('woff'),*/
+         url('fonts/quicksand_book_oblique-webfont.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'quicksand-light';
+	src: url('fonts/quicksand_light-webfont.eot');
+    src: url('fonts/quicksand_light-webfont.eot?#iefix') format('embedded-opentype'),
+         /*url('fonts/quicksand_light-webfont.woff') format('woff'),*/
+         url('fonts/quicksand_light-webfont.ttf') format('truetype');
+ }
+
+@font-face {
+	font-family: 'CPMono';
+	src: url('fonts/cpmono_v07_light-webfont.eot');
+    src: url('fonts/cpmono_v07_light-webfont.eot?#iefix') format('embedded-opentype'),
+         /*url('fonts/cpmono_v07_light-webfont.woff') format('woff'),*/
+         url('fonts/cpmono_v07_light-webfont.ttf') format('truetype');
+}
+
+body{
+    font-family: 'quicksand-book',serif;
+}

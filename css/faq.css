@@ -1,0 +1,55 @@
+.faq .tabs{
+	min-height:92px;
+}
+
+.faq .tabs a{
+	top:6px;
+	line-height:26px;
+}
+
+.faq .tabs-content{
+	border:2px solid #222;
+	border-top:none;
+	border-radius:0 0 5px 5px;
+	padding:0;
+}
+
+.faq .tab-desc{
+	border-radius:5px 5px 0 0;
+}
+
+.faq-col{
+	width:50%;
+}
+
+.faq-q-list{
+	margin:0;
+	padding:0;
+}
+
+.faq-q{
+	background:url(../img/dotted_line_2.png) repeat-x left top;
+	position:relative;
+}
+
+.faq-q > a{
+	font-family:'quicksand-bold';
+	font-size:16px;
+	line-height:1em;
+	text-decoration:none;
+	color:#222;
+	display:block;
+	padding:20px 30px;
+	background:url(../img/dotted_line_vertical.png) repeat-y right top;
+}
+
+.faq-q:first-child{
+	background:none;
+}
+
+.faq-a{
+	position:relative;
+	display:none;
+	font-size:15px;
+	margin:0;
+}
