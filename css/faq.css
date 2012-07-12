@@ -19,15 +19,26 @@
 }
 
 .faq-col{
-	width:50%;
+	width:480px;
 }
 
-.faq-q{
+.faq-block-wrapper{
 	background:url(../img/dotted_line_2.png) repeat-x left top;
-	position:relative;
 }
 
-.faq-q > a{
+.faq-block-wrapper:first-child{
+	background:none;
+}
+
+.faq-block{
+	width:480px;
+}
+
+.faq-block.active{
+	position:absolute;
+}
+
+a.faq-q{
 	font-family:'quicksand-bold';
 	font-size:16px;
 	line-height:1em;
@@ -38,12 +49,12 @@
 	background:url(../img/dotted_line_vertical.png) repeat-y right top;
 }
 
-.faq-q > a:focus{
-	outline:none;
+.faq-q.no-vertical{
+	background:none;
 }
 
-.faq-block:first-child > .faq-q{
-	background:none;
+.faq-q:focus{
+	outline:none;
 }
 
 .faq-a{
@@ -51,4 +62,10 @@
 	display:none;
 	font-size:15px;
 	margin:0;
+	padding:0 30px;
 }
+
+.faq-a p{
+	margin:0 0 10px 0;
+}
+

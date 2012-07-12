@@ -124,6 +124,7 @@
 .tabs-content{
 	padding-bottom:10px;
 	overflow:hidden;
+	position:relative; /*careful here*/
 }
 
 .tabs-content > div{
