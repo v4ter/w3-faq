@@ -5,138 +5,52 @@
 	<title>w3labs - FAQ</title>
 
 	<link rel="stylesheet" href="css/_styles.css">
+
+	<script type="text/template" id="tabs-template">
+
+		<ul class="tabs">
+			{%
+			var i = 0;
+			_.each(FaqModel, function(category, categoryName){ 
+			%}
+				<li data-tab="tab-{{ i }}" {% if(i === 0) { i+=1; %} class="active" {% } %} >
+					<a href="#">{{ categoryName }}</a>
+					<p class="tab-desc">{{ category.subtitle }}</p>
+				</li>
+			{% }); %}
+		</ul>
+
+
+		<div class="tabs-content">
+			{%
+			var i = 0;
+			_.each(FaqModel, function(category, categoryName){ 
+			%}
+				<div data-tab="tab-{{ i }}" {% if(i === 0) { i+=1; %} class="active" {% } %}>
+					<div class="faq-col">
+						{% _.each(category.questions, function(question){ %}
+							<div class="faq-block-wrapper">
+								<div class="faq-block">
+									<a href="#" class="faq-q">{{ question.q }}</a>
+									<div class="faq-a">{{ question.a }}</div>
+								</div>
+							</div>
+						{% }); %}
+					</div>
+				</div>
+			{% }); %}
+		</div>
+
+	</script>
+
 </head>
 
 <body>
 	<div class="container faq">
-		<ul class="tabs">
-			<li data-tab="tab-1" class="active">
-				<a href="#">Category 1</a>
-				<p class="tab-desc">Category subtitle 1</p>
-			</li>
-
-			<li data-tab="tab-2">
-				<a href="#">Category 2</a>
-				<p class="tab-desc">Category subtitle 2</p>
-			</li>
-		</ul>
-
-		<div class="tabs-content">
-			<div data-tab="tab-1">
-				<div class="faq-col">
-					<div class="faq-block-wrapper">
-						<div class="faq-block">
-							<a href="#" class="faq-q">Lorem ipsum dolor sit amet, consectetur adipiscing</a>
-						
-							<div class="faq-a">
-								<p>
-									Etiam semper porta hendrerit. Aenean ac pharetra orci. Phasellus pretium dui ac eros vestibulum mollis. Nulla facilisi. 
-									Nullam eu dui risus. Vestibulum orci nulla, sagittis aliquet viverra quis, auctor tincidunt turpis. Duis iaculis, 
-									augue eu consequat convallis, lectus felis ultricies erat, a malesuada dui justo euismod ligula. Morbi sollicitudin 
-									ullamcorper nunc, eleifend malesuada
-								</p>
-							</div>
-						</div><!-- end .faq-block -->
-					</div><!-- end .faq-block-wrapper -->
-
-					<div class="faq-block-wrapper">
-						<div class="faq-block">
-							<a href="#" class="faq-q">Lorem ipsum dolor sit amet, consectetur adipiscing</a>
-						
-							<div class="faq-a">
-								<p>
-									Etiam semper porta hendrerit. Aenean ac pharetra orci. Phasellus pretium dui ac eros vestibulum mollis. Nulla facilisi. 
-									Nullam eu dui risus. Vestibulum orci nulla, sagittis aliquet viverra quis, auctor tincidunt turpis. Duis iaculis, 
-									augue eu consequat convallis, lectus felis ultricies erat, a malesuada dui justo euismod ligula. Morbi sollicitudin 
-									ullamcorper nunc, eleifend malesuada
-								</p>
-							</div>
-						</div><!-- end .faq-block -->
-					</div><!-- end .faq-block-wrapper -->
-
-					<div class="faq-block-wrapper">
-						<div class="faq-block">
-							<a href="#" class="faq-q">Lorem ipsum dolor sit amet, consectetur adipiscing</a>
-						
-							<div class="faq-a">
-								<p>
-									Etiam semper porta hendrerit. Aenean ac pharetra orci. Phasellus pretium dui ac eros vestibulum mollis. Nulla facilisi. 
-									Nullam eu dui risus. Vestibulum orci nulla, sagittis aliquet viverra quis, auctor tincidunt turpis. Duis iaculis, 
-									augue eu consequat convallis, lectus felis ultricies erat, a malesuada dui justo euismod ligula. Morbi sollicitudin 
-									ullamcorper nunc, eleifend malesuada
-								</p>
-							</div>
-						</div><!-- end .faq-block -->
-					</div><!-- end .faq-block-wrapper -->
-
-					<div class="faq-block-wrapper">
-						<div class="faq-block">
-							<a href="#" class="faq-q">Lorem ipsum dolor sit amet, consectetur adipiscing</a>
-						
-							<div class="faq-a">
-								<p>
-									Etiam semper porta hendrerit. Aenean ac pharetra orci. Phasellus pretium dui ac eros vestibulum mollis. Nulla facilisi. 
-									Nullam eu dui risus. Vestibulum orci nulla, sagittis aliquet viverra quis, auctor tincidunt turpis. Duis iaculis, 
-									augue eu consequat convallis, lectus felis ultricies erat, a malesuada dui justo euismod ligula. Morbi sollicitudin 
-									ullamcorper nunc, eleifend malesuada
-								</p>
-							</div>
-						</div><!-- end .faq-block -->
-					</div><!-- end .faq-block-wrapper -->
-
-					<div class="faq-block-wrapper">
-						<div class="faq-block">
-							<a href="#" class="faq-q">Lorem ipsum dolor sit amet, consectetur adipiscing</a>
-						
-							<div class="faq-a">
-								<p>
-									Etiam semper porta hendrerit. Aenean ac pharetra orci. Phasellus pretium dui ac eros vestibulum mollis. Nulla facilisi. 
-									Nullam eu dui risus. Vestibulum orci nulla, sagittis aliquet viverra quis, auctor tincidunt turpis. Duis iaculis, 
-									augue eu consequat convallis, lectus felis ultricies erat, a malesuada dui justo euismod ligula. Morbi sollicitudin 
-									ullamcorper nunc, eleifend malesuada
-								</p>
-							</div>
-						</div><!-- end .faq-block -->
-					</div><!-- end .faq-block-wrapper -->
-
-					<div class="faq-block-wrapper">
-						<div class="faq-block">
-							<a href="#" class="faq-q">Lorem ipsum dolor sit amet, consectetur adipiscing</a>
-						
-							<div class="faq-a">
-								<p>
-									Etiam semper porta hendrerit. Aenean ac pharetra orci. Phasellus pretium dui ac eros vestibulum mollis. Nulla facilisi. 
-									Nullam eu dui risus. Vestibulum orci nulla, sagittis aliquet viverra quis, auctor tincidunt turpis. Duis iaculis, 
-									augue eu consequat convallis, lectus felis ultricies erat, a malesuada dui justo euismod ligula. Morbi sollicitudin 
-									ullamcorper nunc, eleifend malesuada
-								</p>
-
-								<p>
-									Etiam semper porta hendrerit. Aenean ac pharetra orci. Phasellus pretium dui ac eros vestibulum mollis. Nulla facilisi. 
-									Nullam eu dui risus. Vestibulum orci nulla, sagittis aliquet viverra quis, auctor tincidunt turpis. Duis iaculis, 
-									augue eu consequat convallis, lectus felis ultricies erat, a malesuada dui justo euismod ligula. Morbi sollicitudin 
-									ullamcorper nunc, eleifend malesuada
-								</p>
-
-								<p>
-									Etiam semper porta hendrerit. Aenean ac pharetra orci. Phasellus pretium dui ac eros vestibulum mollis. Nulla facilisi. 
-									Nullam eu dui risus. Vestibulum orci nulla, sagittis aliquet viverra quis, auctor tincidunt turpis. Duis iaculis, 
-									augue eu consequat convallis, lectus felis ultricies erat, a malesuada dui justo euismod ligula. Morbi sollicitudin 
-									ullamcorper nunc, eleifend malesuada
-								</p>
-							</div>
-						</div><!-- end .faq-block -->
-					</div><!-- end .faq-block-wrapper -->
-				</div><!-- end .faq-col -->
-			</div><!-- end tab -->
-
-			<div data-tab="tab-2">
-				<p>content 2</p>
-			</div><!-- end tab -->
-		</div>
 	</div><!-- end .container -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="js/vendor/underscore.js"></script>
 <script src="js/tabs.js"></script>
 <script src="js/main.js"></script>
 </body>

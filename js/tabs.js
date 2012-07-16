@@ -6,7 +6,10 @@ $.fn.tabs = function(control){
 		e.preventDefault();
 
 		var cur = $(this).parent(),
-			tabName = $(this).parent().attr('data-tab');
+			tabName = $(this).parent().data('tab'),
+			previousTabName = element.find('.active').data('tab');
+
+		if(tabName == previousTabName) return false;
 
 		element.find(">[data-tab]").removeClass('active');
 		cur.addClass('active');
